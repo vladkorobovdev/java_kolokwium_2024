@@ -5,8 +5,10 @@ public abstract class Clock {
     protected int minutes;
     protected int seconds;
 
-    public Clock() {
+    private City city;
 
+    public Clock(City city) {
+        this.city = city;
     }
 
     public void setCurrentTime() {
@@ -29,6 +31,15 @@ public abstract class Clock {
         this.hours = hours;
         this.minutes = minutes;
         this.seconds = seconds;
+    }
+
+    public void setCity(City city) {
+        this.hours += Integer.parseInt(city.getTimeZone()) - Integer.parseInt(this.city.getTimeZone());
+        this.city = city;
+
+        if (this.hours >= 24) {
+            this.hours -= 24;
+        }
     }
 
     @Override

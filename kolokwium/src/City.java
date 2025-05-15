@@ -49,4 +49,20 @@ public class City {
 
         return map;
     }
+
+    public String getCapital() {
+        return capital;
+    }
+
+    public String getTimeZone() {
+        return timeZone;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
 }

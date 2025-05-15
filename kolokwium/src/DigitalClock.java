@@ -6,7 +6,8 @@ public class DigitalClock extends Clock{
         HALF
     }
 
-    public DigitalClock(TimeType timeType) {
+    public DigitalClock(TimeType timeType, City city) {
+        super(city);
         this.timeType = timeType;
     }
 
