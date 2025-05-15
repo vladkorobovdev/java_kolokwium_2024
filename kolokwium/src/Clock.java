@@ -1,9 +1,9 @@
 import java.time.LocalTime;
 
 public abstract class Clock {
-    private int hours;
-    private int minutes;
-    private int seconds;
+    protected int hours;
+    protected int minutes;
+    protected int seconds;
 
     public Clock() {
 
@@ -33,6 +33,6 @@ public abstract class Clock {
 
     @Override
     public String toString() {
-        return  this.hours + ":" + this.minutes + ":" + this.seconds;
+        return String.format("%02d:%02d:%02d", this.hours, this.minutes, this.seconds);
     }
 }
